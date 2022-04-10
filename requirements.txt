@@ -1,0 +1,7 @@
+torch
+tensorboardX
+numpy
+tqdm
+scipy
+ml_collections
+cupy-cuda110
