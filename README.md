@@ -43,7 +43,9 @@ horovodrun -np 8 /usr/bin/python3.7 main_vit.py --pcie --compress --compressor d
 
 ### Examples to run MLP-Mixer
 ```shell script
-# run MLP-Mixer on 8 GPUs with DRAGONN as the compressor and the compression ratio is 0.001
+# run MLP-Mixer on 8 GPUs with DRAGONN as the compressor and the compression ratio is 0.001.
+# --batching is the argument to enable sparse decoding
+# --threshold is to specify when to apply compression based on efficiency-aware tensor selection
 horovodrun -np 8 python3 main_mixer.py --pcie --compress --compressor atopk --memory none --comm allgather --compress-ratio 1e-3 --lr 1e-5 --batch_size 32 --batching --threshold 204800 --epochs 1 --print_every 1 --pretrained --dataset cifar10
 ```
 
