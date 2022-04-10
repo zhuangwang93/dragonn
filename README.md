@@ -11,6 +11,10 @@ DRAGONN can significantly reduce the compression time by up to 70% compared to s
 ### install dependencies
 ```shell script
 pip install -r requirements
+
+# install Dragonn
+cd extensions/cuda
+python setup.py install
 ```
 
 ### download pretrain weights
@@ -62,6 +66,3 @@ parser = add_parser_arguments(parser)
 # Line 202: wrap the optimizer with Dragonn's optimizer to support compression
 optimizer = wrap_compress_optimizer(model, optimizer, args)
 ```
-
-
-
