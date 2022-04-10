@@ -183,10 +183,10 @@ def main():
         
     model=MlpMixer(config, num_classes=num_classes, zero_head=True)
     if args.pretrained and args.net_type=="Mixer-B_16":
-        # pretrained_dir="/home/zx22/data/pretrain/Mixer-B_16.npz"
-        # model.load_from(np.load(pretrained_dir))
-        pretrained_dir="/home/zx22/fast_compression/logs/mlp/imagenette/1/20211223-033956/model.pkl"
-        model.load_state_dict(torch.load(pretrained_dir))
+        pretrained_dir="/home/zx22/data/pretrain/Mixer-B_16.npz"
+        model.load_from(np.load(pretrained_dir))
+        #pretrained_dir="/home/zx22/fast_compression/logs/mlp/imagenette/1/20211223-033956/model.pkl"
+        #model.load_state_dict(torch.load(pretrained_dir))
     model=model.cuda()
     num_tensors, tensor_sizes = count_tensors(model)
     num_params = count_parameters(model)
