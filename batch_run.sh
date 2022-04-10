@@ -1,4 +1,4 @@
-# horovodrun -np 4 /usr/bin/python3.7 main_vit.py --pcie --lr 1e-5 --batch_size 32 --epochs 1 --print_every 10 --pretrained --dataset cifar10
+horovodrun -np 1 /usr/bin/python3.7 main_vit.py --pcie --lr 1e-5 --batch_size 32 --epochs 1 --print_every 10 --pretrained --dataset cifar10
 # horovodrun -np 4 /usr/bin/python3.7 main_vit.py --pcie --compress --compressor atopk --memory none --comm allgather --compress-ratio 0.125 --lr 1e-5 --batch_size 32 --batching --threshold 204800 --epochs 1 --print_every 10 --pretrained --dataset cifar10
 # horovodrun -np 4 /usr/bin/python3.7 main_vit.py --pcie --compress --compressor atopk --memory none --comm allgather --compress-ratio 0.125 --lr 1e-5 --batch_size 32 --batching --threshold 102400 --epochs 1 --print_every 10 --pretrained --dataset cifar10
 # horovodrun -np 4 /usr/bin/python3.7 main_vit.py --pcie --compress --compressor dgc --memory none --comm allgather --compress-ratio 0.125 --lr 1e-5 --batch_size 32  --threshold 10240 --epochs 1 --print_every 10 --pretrained --dataset cifar10
@@ -8,7 +8,7 @@
 # horovodrun -np 4 /usr/bin/python3.7 main_vit.py --pcie --compress --compressor atopk --memory none --comm allgather --compress-ratio 0.0625 --lr 1e-5 --batch_size 32 --batching --threshold 204800 --epochs 1 --print_every 10 --pretrained --dataset cifar10
 # horovodrun -np 4 /usr/bin/python3.7 main_mixer.py --pcie --compress --compressor atopk --memory none --comm allgather --compress-ratio 0.0625 --lr 1e-5 --batch_size 32 --batching --threshold 102400 --epochs 1 --print_every 10 --pretrained --dataset cifar10
 # horovodrun -np 4 /usr/bin/python3.7 main_vit.py --pcie --compress --compressor dgc --memory none --comm allgather --compress-ratio 0.0625 --lr 1e-5 --batch_size 32  --threshold 10240 --epochs 1 --print_every 10 --pretrained --dataset cifar10
-horovodrun -np 4 /usr/bin/python3.7 main_vit.py --pcie --compress --compressor qsgd --memory none --comm allgather --compress-ratio 0.125 --lr 1e-5 --batch_size 32 --threshold 10240 --epochs 1 --print_every 10 --pretrained --dataset cifar10
+# horovodrun -np 4 /usr/bin/python3.7 main_vit.py --pcie --compress --compressor qsgd --memory none --comm allgather --compress-ratio 0.125 --lr 1e-5 --batch_size 32 --threshold 10240 --epochs 1 --print_every 10 --pretrained --dataset cifar10
 # horovodrun -np 4 /usr/bin/python3.7 main_vit.py --pcie --compress --compressor topk --memory none --comm allgather --compress-ratio 0.0625 --lr 1e-5 --batch_size 32 --threshold 10240 --epochs 1 --print_every 10 --pretrained --dataset cifar10
 
 # horovodrun -np 4 /usr/bin/python3.7 main_vit.py --pcie --compress --compressor atopk --memory none --comm allgather --compress-ratio 0.03125 --lr 1e-5 --batch_size 32 --batching --threshold 204800 --epochs 1 --print_every 10 --pretrained --dataset cifar10
