@@ -6,6 +6,20 @@ Dragonn is a randomized hashing algorithm for gradient sparsification in data-pa
 DRAGONN can significantly reduce the compression time by up to 70% compared to state-of-the-art GS approaches, and achieve up to 3.52x speedup in total training throughput.
 
 
+## Citation
+
+If you find our project useful in your research, please consider citing:
+
+```
+@InProceedings{wang22aj,
+  title = 	 {{DRAGONN}: Distributed Randomized Approximate Gradients of Neural Networks},
+  author =       {Wang, Zhuang and Xu, Zhaozhuo and Wu, Xinyu and Shrivastava, Anshumali and Ng, T. S. Eugene},
+  booktitle = 	 {Proceedings of the 39th International Conference on Machine Learning (ICML)},
+  year = {2022}
+}
+```
+
+
 ## Dependencies
 
 ### install dependencies
